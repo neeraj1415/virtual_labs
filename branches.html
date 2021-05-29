@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+	<title>branches</title>
+<style>	
+body {
+	background-color: powderblue;}
+h1   {
+	background:black;
+	font-size:40px;
+	color: white;
+	text-align:center;
+	padding: 20px;
+}
+.branch{
+background:orange;  
+ height:50px;
+	width:100px;
+	font-size:30px;
+	padding:3px;
+	outline:none;
+	cursor:pointer;
+	margin:auto;
+	color: red;}
+</style>
+</head>
+<body>
+	<header>
+	<h1>BRANCHES</h1>
+	<div class="text">
+	<a href="home1.html">HOME</a>
+	<p style="color:red;font-size:30px; text-align:center; ">select your branch</p>
+	<div class="text">
+			
+		<a href="ece_login.html" style="text-align:center">ECE</a><br>
+		
+		<a href="eee_login.html">EEE</a><br>
+		<a href="cse_login.html">CSE</a><br>
+		<a href="#">MECH</a><br>
+		<a href="#">BIOTECH</a><br>
+		<a href="#">MME</a><br>
+		<a href="#">CHEMICAL</a><br>
+	</div>
+</div>
+	
+
+	<script>
+    const menuToggle = document.querySelector('.toggle');
+    const showcase = document.querySelector('.showcase');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      showcase.classList.toggle('active');
+    });
+    </script>
+</header>
+</body>
+
+</html>

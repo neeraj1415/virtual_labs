@@ -1,0 +1,78 @@
+<html>
+<head>
+     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+<title>
+Login page
+</title>
+<Style>
+        body  
+{  
+    margin: 0;  
+    padding: 0;  
+    background-color:#6abadeba;  
+    font-family: 'Arial';  
+}  
+  .log{  
+        width: 382px;  
+        overflow: hidden;  
+        margin: auto;  
+        margin: 20 0 0 450px;  
+        padding: 80px;  
+        background: #23463f;  
+        border-radius: 15px ;  
+          
+}
+h2{  font-family:Comic Sans Ms;
+    text-align: center;  
+    color: #277582;  
+    padding: 20px; 
+    font-size:20pt;
+} 
+</Style> 
+</head>
+<body>
+<h2>
+ Login Page
+</h2>
+<div class="text">
+    <a href="home1.html">HOME</a>    
+        <a href="REG.html">Registration</a>
+        <a href="#">ABOUT</a><br><br>
+</div>
+<div class="log">
+<form name="login">
+<label><b>User Name     
+        </b>    
+        </label> 
+        <br><input type="text" name="userid"/><br><br>
+<label><b>Password     
+        </b>  </label><br>
+        <input type="password" name="pswrd"/><br><br>
+<input type="button" onclick="check(this.form)" value="Login"/><br><br>
+not registered?
+<a href="REG.html" style="color:white;">
+  Click here
+</a>to register.</a>
+<br><br>
+<a href="h1 style="background-color:powderblue; >forgotpassword</a>
+<br><br>
+<input type="reset" value="Cancel"/>
+</form>
+</div>
+<script language="javascript">
+function check(form)/*function to check userid & password*/
+{
+ /*the following code checkes whether the entered userid and password are matching*/
+ if(form.userid.value == "eee" && form.pswrd.value == "electrical")
+  {
+    window.open('eee_lab.html')/*opens the target page while Id & password matches*/
+  }
+ else
+ {
+   alert("Error Password or Username")/*displays error message*/
+  }
+}
+</script>
+</body>
+</html>
