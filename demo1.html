@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	 <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+ 
+  <style>
+  	body {
+  background: #555;
+}
+h1   {
+	background:black;
+	font-size:40px;
+	color: white;
+	text-align:center;
+	padding: 20px;
+}
+.content {
+  max-width: 1100px;
+  margin: auto;
+  background: white;
+  padding: 10px;
+}
+ .button {
+  background-color: blue; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+ z-index:10;
+}
+button {
+  background-color: black; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin:3px 3px 3px 3px;
+}
+.button button:hover {background-color: grey}
+.button:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+img {
+  border-radius: 8px;
+}
+
+     
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+	<div class="content">
+		 <h1 style="text-align:center;">INVERTING AMPLIFIER</h1>
+	<div class="wrapper">
+	 
+      </div>
+<div class="button">
+<button id="area1">Introduction</button>
+<button id="area2">Theory</button>
+<button id="area3">objective</button>
+<button id="area4">procedure</button>
+<button id="area5">simulator</button>
+<button id="area6">quiz</button>
+<button id="area7">references</button>
+</div>
+<section id="1">
+	<h2>Introduction</h2>
+      <p style="font-size:20px"><b>About the Experiment</b></p>
+      <p>This experiment enables a student to learn<br><br>
+How to realize functionality of Dual 4 Line to 1 Line Multiplexer using 74153 IC<br>
+How Dual 4 Line to 1 Line Multiplexer select the particular input to be sent to the output IY{1 = 1, 2}.<br>
+How Each of the strobe signals IG {I = 1, 2} acts as an enable signal for the corresponding 4-to-1 M multiplexer.<br>
+How to realize functionality of Quad 2 Line to 1 Line Multiplexer using 74157 IC<br>
+How Quad 2 Line to 1 Line Multiplexer select the particular input to be sent to the output IY{1 = 1, 2, 3, 4}.<br>
+How the strobe signal acts as an enable signal for each of the four 4-to-1 M multiplexers.<br>
+</p>
+
+</section>
+<section id="2" style="display: none;"><H2>THEORY</H2>
+<p>An inverting amplifier using opamp is a type of amplifier using opamp where the output waveform will be phase opposite to the input waveform. The input waveform will be amplifier by the factor Av (voltage gain of the amplifier) in magnitude and its phase will be inverted. In the inverting amplifier circuit the signal to be amplified is applied to the inverting input of the opamp through the input resistance R1. Rf is the feedback resistor. Rf and Rin together determine the gain of the amplifier. Inverting operational amplifier gain can be expressed using the equation Av = – Rf/R1. Negative sign implies that the output signal is negated. The circuit diagram of a basic inverting amplifier using opamp is shown below.
+ The input and output waveforms of an inverting amplifier using opamp is shown below. The graph is drawn assuming that the gain (Av) of the amplifier is 2
+and the input signal is a sine wave. It is clear from the graph that the output
+is twice in magnitude when compared to the input (Vout = Av x Vin) and phase opposite to the input.</p>
+<img src="inverting_amp_ckt.JPG">
+<p>The above figure shows the circuit diagram of an ideal inverting amplifier. The input is provided to the inverting input terminal through resistor R1 and the non-inverting terminal is connected to ground. The output is fed back to the inverting input through the feedback resistor Rf.
+<br>
+When a positive-going voltage is applied at the inverting input (base of transistor Q2), the current at the collector terminal of Q2 is increased and the voltage drop across RC is also increased. This effect drives the output voltage low because the non-inverting input terminal (base of Q1) is grounded. The base of Q2 will be pulled down to ground level by negative feedback, irrespective of the input voltage applied. Thus, when Vin is applied, the output Vout changes to a level that keeps the inverting input terminal at the ground level. For this reason, the inverting input terminal in this circuit configuration is referred to as Virtual Ground. The junction of resistors R1 and Rf always remain at ground level due to the virtual ground. Ignoring the small bias current that flows into the op-amp circuit, the current I flows through both the resistors R1 and Rf. The input and output voltages can be calculated as,<br>
+
+Vin = I.R1​<br>
+
+​and Vout = -I.Rf<br>
+
+The closed-loop voltage gain is ACL = Vout / Vin = -I.Rf / I.R1<br>
+</p>
+<h2>Voltage Gain of Inverting Operational Amplifier​</h2>
+<p>The closed loop voltage gain of an inverting op amp is given as<br>
+
+ACL = Vout / Vin = – (Rf / R1​​)<br>
+
+The negative sign of the closed-loop gain equation indicates that the output is inverted with respect to the input applied.<br>
+
+In a practical inverting amplifier, the non-inverting input is not connected to ground directly. It should be grounded by a resistor with the same value as R1 to keep the input currents equal. This gives a better chance of the output voltage being zero (or close to 0) volts when the input is zero volts.​<br>
+</p>
+</section>
+
+<section id="3" style="display: none;">
+	
+	<H2>AIM:-</H2><p>Design and realize Inverting and Non-inverting amplifier using 741 Op-amp. Apparatus Required: Bread Board, 741 IC, ±12V supply, Resistors and connecting leads.</p>
+</section>
+<section id="4" style="display: none;"><H2>CIRCUIT</H2>	
+<img src="inverting_amp_ckt.JPG" alt="circuit" width="350" height="250"></section>
+<p id="5" style="display: none;">simulator</p>
+<p id="6" style="display: none;">quiz</p>
+<p id="7" style="display: none;">references</p>
+
+<script>
+$(document).ready(function(){
+  $("#area1").click(function(){
+    $("#1").show();
+    $("#2").hide();
+     $("#3").hide();
+      $("#4").hide();
+       $("#5").hide();
+        $("#6").hide();
+         $("#7").hide();
+
+  });
+  $("#area2").click(function(){
+    $("#1").hide();
+    $("#2").show();
+     $("#3").hide();
+      $("#4").hide();
+       $("#5").hide();
+        $("#6").hide();
+         $("#7").hide();
+
+  });
+  $("#area3").click(function(){
+    $("#1").hide();
+    $("#2").hide();
+     $("#3").show();
+      $("#4").hide();
+       $("#5").hide();
+        $("#6").hide();
+         $("#7").hide();
+
+  });
+  $("#area4").click(function(){
+    $("#1").hide();
+    $("#2").hide();
+     $("#3").hide();
+      $("#4").show();
+       $("#5").hide();
+        $("#6").hide();
+         $("#7").hide();
+
+  });
+  $("#area5").click(function(){
+    $("#1").hide();
+    $("#2").hide();
+     $("#3").hide();
+      $("#4").hide();
+       $("#5").show();
+        $("#6").hide();
+         $("#7").hide();
+
+  });
+  $("#area6").click(function(){
+    $("#1").hide();
+    $("#2").hide();
+     $("#3").hide();
+      $("#4").hide();
+       $("#5").hide();
+        $("#6").show();
+         $("#7").hide();
+
+  });
+  $("#area7").click(function(){
+    $("#1").hide();
+    $("#2").hide();
+     $("#3").hide();
+      $("#4").hide();
+       $("#5").hide();
+        $("#6").hide();
+         $("#7").show();
+
+  });
+});
+</script>
+</div>
+</body>
+</html>
