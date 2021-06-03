@@ -1,48 +1,412 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
+
+
+	 <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+ 
+  <style>
+  	#tab {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+}
+
+#tab td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#tab tr:nth-child(even){background-color: #f2f2f2;}
+
+#tab tr:hover {background-color: #ddd;}
+
+#tab th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+  	body {
+  background: #555;
+}
+h1   {
+	background:black;
+	font-size:40px;
+	color: white;
+	text-align:center;
+	padding: 20px;
+}
+.content {
+  max-width: 1300px;
+  margin: auto;
+  background: white;
+  padding: 10px;
+}
+ .button {
+  background-color: blue; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+ z-index:10;
+}
+button {
+  background-color: black; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin:3px 3px 3px 3px;
+}
+.button button:hover {background-color: grey}
+.button:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+img {
+  border-radius: 8px;
+}
+
+     
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 <body>
-<h1 align="center">EXPERIMENT -1 : INVERTING AMPLIFIER</h1>
-<H2>AIM:-</H2><p>Design and realize Inverting and Non-inverting amplifier using 741 Op-amp. Apparatus Required: Bread Board, 741 IC, ±12V supply, Resistors and connecting leads.</p>
-<h2>SIMULATOR USED:</h2><a href="https://www.circuitlab.com/editor/#">CIRCUITSLAB</a>
-<H2>THEORY</H2>
-<p>An inverting amplifier using opamp is a type of amplifier using opamp where the output waveform will be phase opposite to the input waveform. The input waveform will be amplifier by the factor Av (voltage gain of the amplifier) in magnitude and its phase will be inverted. In the inverting amplifier circuit the signal to be amplified is applied to the inverting input of the opamp through the input resistance R1. Rf is the feedback resistor. Rf and Rin together determine the gain of the amplifier. Inverting operational amplifier gain can be expressed using the equation Av = – Rf/R1. Negative sign implies that the output signal is negated. The circuit diagram of a basic inverting amplifier using opamp is shown below.
- The input and output waveforms of an inverting amplifier using opamp is shown below. The graph is drawn assuming that the gain (Av) of the amplifier is 2
-and the input signal is a sine wave. It is clear from the graph that the output
-is twice in magnitude when compared to the input (Vout = Av x Vin) and phase opposite to the input.</p>
+	<div class="content">
+		 <h1 style="text-align:center;">Frequency response of CE amplifier</h1>
+	<div class="wrapper">
+	 
+      </div>
+<div class="button">
+<button id="area1">Introduction</button>
+<button id="area2">Theory</button>
+<button id="area3">objective</button>
+<button id="area4">procedure</button>
+<button id="area5" onclick="myfunction()">simulator</button>
+<button id="area6">quiz</button>
+<button id="area7">references</button>
+</div>
+<section id="1">
+	<h2>Introduction</h2>
+      <p style="font-size:20px"><b>About the Experiment</b></p>
+      <p>This experiment enables a student to learn<br><br>
+Students are able to
+1. Calculate the Bandwidth of BJT Common Emitter amplifier.
+________________________________________
+<br>
+</p>
+
+</section>
+<section id="2" style="display: none;"><H2>THEORY</H2>
+<p>The common emitter configuration is widely used as a basic amplifier as it has both voltage and current amplification.<br>
+
+Resistors R1 and R2 form a voltage divider across the base of the transistor. The function of this network is to provide necessary bias condition and ensure that emitter-base junction is operating in the proper region.<br>
+
+In order to operate transistor as an amplifier, biasing is done in such a way that the operating point is in the active region. For an amplifier the Q-point is placed so that the load line is bisected. Therefore, in practical design VCE is always set to VCC/2. This will confirm that the Q-point always swings within the active region. This limitation can be explained by maximum signal handling capacity. For the maximum input signal, output is produced without any distortion and clipping.</p>
+<img src="freq_resp_ce_ckt_diagram.png" alt="circuit" width="350" height="250">
+<p><b>The Bypass Capacitor:</b><br>
+
+The emitter resistor RE is required to obtain the DC quiescent point stability. However the inclusion of RE in the circuit causes a decrease in amplification at higher frequencies. In order to avoid such a condition, it is bypassed by a capacitor so that it acts as a short circuit for AC and contributes stability for DC quiescent condition. Hence capacitor is connected in parallel with emitter resistance.<br>
+
+Xce << Re<br>
+1/2pifCe << Re ,Ce >> 1/2pifRe<br>
+The Input/ Output Coupling (or Blocking) Capacitor: An amplifier amplifies the given AC signal. In order to have noiseless transmission of a signal (without DC), it is necessary to block DC i.e. the direct current should not enter the amplifier or load. This is usually accomplished by inserting a coupling capacitor between two stages.<br>
+
+XCC << ( Ri hie )<br>
+
+1/2pifCc << Ri(hie)<br>
+Cc >> 1/2pifRi(hie)<br>
+
+CC - Output Coupling Capacitor<br>
+
+CB - Input Coupling Capacitor<br>
+
+Frequency response of Common Emitter Amplifier:<br>
+
+Emitter bypass capacitors are used to short circuit the emitter resistor and thus increases the gain at high frequency. The coupling and bypass capacitors cause the fall of the signal in the low frequency response of the amplifier because their impedance becomes large at low frequencies. The stray capacitances are effectively open circuits.<br>
+
+In the mid frequency range large capacitors are effectively short circuits and the stray capacitors are open circuits, so that no capacitance appears in the mid frequency range. Hence the mid band frequency gain is maximum.<br>
+
+At the high frequencies, the bypass and coupling capacitors are replaced by short circuits. The stray capacitors and the transistor determine the response.<br>
+
+Characteristics of CE Amplifier:<br>
+
+Large current gain.<br>
+Large voltage gain.<br>
+Large power gain.<br>
+Current and voltage phase shift of 1800.<br>
+Moderated output resistance.<br>
+</p>
+</section>
+
+<section id="3" style="display: none;">
+	
+	<H2>AIM:-</H2><p>1.To obtain Frequency response characteristics ofCommon emitter amplifier and<br> 2.To determineBandwidth</p>
+</section>
+<section id="4" style="display: none;"><H2>CIRCUIT</H2>	
+<img src="freq_resp_ce_ckt_diagram.png" alt="circuit" width="350" height="250">
+<h2>components required</h2>
+<table id="tab">
+  <tr>
+    <th>S.no</th>
+    <th>name</th> 
+    <th>quantity</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Transistor BC107</td>
+    <td>ONE </a></td>
+    
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Resistors (100K%u2126, 10K%u2126, 1K%u2126)</td>
+    <td>ONE EACH</td>
+    
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Resistors (2.2 K%u2126)</td>
+    <td>TWO</td>
+
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Capacitors (10µF)</td>
+    <td>TWO</td>
+    
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Capacitors (100µF)</td>
+    <td>ONE</td>
+    
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>BREAD BOARD</td>
+    <td>ONE</td>
+    
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>Dual DC Regulated Power supply (0 – 30 V)</td>
+    <td>ONE</td>
+    
+  </tr>
+   <tr>
+    <td>8</td>
+    <td>Cathode Ray Oscilloscope (CRO) (0-20MHz)</td>
+    <td>ONE</td>
+    
+  </tr>
+   <tr>
+    <td>9</td>
+    <td>Function Generator (0-1MHz)</td>
+    <td>ONE</td>
+    
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>Connecting Wires</td>
+    <td></td>
+    
+  </tr>
+
+</table>
 <H2>PROCEDURE</H2>
-<p>performance and of course the most popular operational amplifier. It can be used in a verity of applications like integrator,
-Differentiator, voltage follower, amplifier etc. uA 741 has a wide supply voltage range (+/-22V DC) and has a high open loop gain. The IC has an integrated compensation network for
-improving stability and has short circuit protection. Signal to be amplified is applied to the inverting pi (pin2) of the IC. Non inverting pin (pin3) is connected to ground. R1 is the input resistor and Rf is the feedback resistor. Rf and R1 together sets the gain of the amplifier. With the used values of R1 and Rf the gain will be 10 LL L A B M A N U A L ( E . C . D E P T , ) Page
-6 I N T E G R A T E D C I R C U I T S A N D A P P L I C A T I O N S 1 5 1 0 0 3 (Av = - Rf/R1 =
-10K/1K = 10). RL is the load resistor and the amplified signal will be
-available across it. POT R2 can be used for nullifying the output offset voltage. If you are planning to assemble the circuit, the power supply must be well regulated and filtered. Noise from the power supply can adversely affect the performance of the circuit. When assembling on PCB it is recommended to mount the IC on the board using an IC base.
-In the inverting amplifier only one input is applied and that is to the inverting input ( (V2) terminal. The Non inverting input terminal (V1) is grounded.
-Since, V1=0
-V& V2=Vin
-Vo= -A Vin
-The negative sign indicates the output voltage is 1800 out of phase with respect to the input and amplified by gain A.
-Time simulation
-V1 is currently configured to output a 1kHz sine wave, and you can see the output as well.
-Amplifier bandwidth
-Try the Bode simulation mode. At low frequencies, we get a gain of +20dB (a factor of 10^(20/20) = 10 in voltage) with a phase of -180 degrees -- this means -10. You'll see that at higher frequencies, the circuit no longer provides a gain of -10! You're seeing the op-amp's Gain-Bandwidth product at work. If you change R2 to be 100K instead of 10K, you'll notice that the amplifier's low-frequency gain increases by a factor of 10, but its bandwidth (the frequency range before this gain starts to fall off) drops by a factor of 10</p>
-<H2>TUTORIAL LINK</H2>
+<p>
+	1.	Connect the circuit as shown in the circuit diagram.<br>
+2.	Set source voltage VS = 50mV (say) at 1 KHz frequency using the function generator. Observe the phase difference between input and output by giving these two signals to the dual channels of CRO.<br>
+3.	Keeping input voltage constant, vary the frequency from 50 Hz to 1 MHz in regular steps and note down the corresponding output voltage. Calculate gain in dB as shown in the tabular column.<br>
+4.	Plot the graph: gain (dB) verses Frequency on a semi log graph sheet.<br>
+5.	Calculate the 3-dB bandwidth from the frequency response.<br>
+
+</p>
+<h3>Expected waveform:<br>
+(a) The Input & Output Waveforms at 1 KHz
+</h3>
+<img src="freq_resp_ce_io.jpg" alt="circuit" width="350" height="250">
+<p>
+	<b>(b) Frequency Response Curve</b><br>
+In the usual application, mid band frequency range are defined as those frequencies at which the response has fallen to 3dB below the maximum gain (|A| max). These are shown as fL and fH and are called as the 3dB frequencies (Lower and Upper Cut-Off Frequencies respectively). The difference between higher cut-off and lower cut-off frequency is referred to as bandwidth (fH - fL).<br>
+<img src="freq_resp_ce_freq.png" alt="circuit" width="350" height="250">
+<b>Calculations from the graph</b><br>
+
+Bandwidth = fH – fL (in Hz)
+
+
+</p>
+<h3>Observation Tables:</h3>
+<p><b>Vs=50 mv</b></p>
+<table id="tab">
+  <tr>
+    <th>Frequency</th>
+    <th>	Vo(Volts)</th>
+    <th>	Gain = Vo/Vs</th>	
+    <th>Gain(dB) = 20 log(Vo/Vs)</th>
+    
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+   <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+
+  </tr>
+  <tr>
+   <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    
+  </tr>
+  <tr>
+   <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+<h2>Results</h2>
+<p>Common Emitter Amplifier is studied and its Bandwidth is calculated.<br>
+1.	Maximum Gain ( Amax )                        =   ___________ dB<br>
+2.	3dB Gain                                             =   ___________ dB<br>
+3.	3dB Lower cut-off frequency, fL             =   ___________  Hz<br>
+4.	3dB Upper cut-off frequency, fH            =   ___________ Hz<br>
+5.	3dB  Bandwidth ( fH - fL )                     =   ___________  Hz<br>
+</p>
+</section>
+<section id="5" style="display: none;"><h2>simulator</h2>
+	<h2>Tutorial link for experiment:</h2>
+<p>refer this vedio for simulation</p>
 <a href="https://youtu.be/CbmKI9ncpJ8">click here</a>
-<H2>CIRCUIT</H2>	
-<img src="inverting_amp_ckt.jpg" alt="circuit" width="350" height="250" />
-<H2>RESULT</H2>
-<p> For Gain 1
-R1=10K, R2 =10K
-􏰀𝑉𝑜𝑢𝑡= −􏰁􏰂𝑉𝑖𝑛􏰄 􏰁􏰃
-VOUT
-  VIN
-   0V 0.1V 0.3V 0.5V
-  In the inverting amplifier only one input is applied and that is to the inverting input ( (V2) terminal. The Non inverting input terminal (V1) is grounded.
-Since, V1=0
-V& V2=Vin
-Vo= -A Vin
-The negative sign indicates the output voltage is 1800 out of phase with respect to the input and amplified by gain A.</p>
+<h2>Simulator </h2>
+<p>name:<b>MULTISIM</b></p>
+<p><b>To download software</b> <a href=" https://www.filehorse.com/download-multisim/download/">click here</a></p>
+<p><b> installation details</b><a href=" https://knowledge.ni.com/KnowledgeArticleDetails?id=kA03q000000YH77CAG&l=en-US">click here</a></p>
+</section>
+<section id="6" style="display: none;"><h2> take quiz</h2>
+<a href="qd.html">attempt quiz</a>
+</section>
+<section id="7" style="display: none;">
+	<h2>references</h2>
+	1.The Art of Electronics
+Textbook by Paul Horowitz and Winfield Hill<br>
+     2. Electronic Devices and Circuits
+Book by Franz J. Monssen, Louis Nashelsky, and Robert Boylestad<br>
+3.<b>youtube lecture</b>: <a href="https://www.youtube.com/watch?v=L6BZEJ4wH4I">click here</a> <br>                      
+</section>
+
+<script>
+	
+$(document).ready(function(){
+  $("#area1").click(function(){
+    $("#1").show();
+    $("#2").hide();
+     $("#3").hide();
+      $("#4").hide();
+       $("#5").hide();
+        $("#6").hide();
+         $("#7").hide();
+
+  });
+  $("#area2").click(function(){
+    $("#1").hide();
+    $("#2").show();
+     $("#3").hide();
+      $("#4").hide();
+       $("#5").hide();
+        $("#6").hide();
+         $("#7").hide();
+
+  });
+  $("#area3").click(function(){
+    $("#1").hide();
+    $("#2").hide();
+     $("#3").show();
+      $("#4").hide();
+       $("#5").hide();
+        $("#6").hide();
+         $("#7").hide();
+
+  });
+  $("#area4").click(function(){
+    $("#1").hide();
+    $("#2").hide();
+     $("#3").hide();
+      $("#4").show();
+       $("#5").hide();
+        $("#6").hide();
+         $("#7").hide();
+
+  });
+  $("#area5").click(function(){
+    $("#1").hide();
+    $("#2").hide();
+     $("#3").hide();
+      $("#4").hide();
+       $("#5").show();
+        $("#6").hide();
+         $("#7").hide();
+
+  });
+  $("#area6").click(function(){
+    $("#1").hide();
+    $("#2").hide();
+     $("#3").hide();
+      $("#4").hide();
+       $("#5").hide();
+        $("#6").show();
+         $("#7").hide();
+
+  });
+  $("#area7").click(function(){
+    $("#1").hide();
+    $("#2").hide();
+     $("#3").hide();
+      $("#4").hide();
+       $("#5").hide();
+        $("#6").hide();
+         $("#7").show();
+
+  });
+});
+</script>
+</div>
 </body>
 </html>

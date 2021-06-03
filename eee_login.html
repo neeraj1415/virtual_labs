@@ -29,15 +29,24 @@ h2{  font-family:Comic Sans Ms;
     padding: 20px; 
     font-size:20pt;
 } 
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(library.PNG);
+    height: 100vh;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+} 
 </Style> 
 </head>
 <body>
+  <header>
 <h2>
  Login Page
 </h2>
 <div class="text">
-    <a href="home1.html">HOME</a>    
-        <a href="REG.html">Registration</a>
+    <a href="home1.html">HOME</a><br>   
+        <a href="REG.html">Registration</a><br>
         <a href="#">ABOUT</a><br><br>
 </div>
 <div class="log">
@@ -66,7 +75,7 @@ function check(form)/*function to check userid & password*/
  /*the following code checkes whether the entered userid and password are matching*/
  if(form.userid.value == "eee" && form.pswrd.value == "electrical")
   {
-    window.open('eee_lab.html')/*opens the target page while Id & password matches*/
+    window.open('ece_labs_list.html')/*opens the target page while Id & password matches*/
   }
  else
  {
@@ -74,5 +83,6 @@ function check(form)/*function to check userid & password*/
   }
 }
 </script>
+</header>
 </body>
 </html>
