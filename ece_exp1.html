@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style1.css">
  
   <style>
+     video { margin-left: 40vw; transform: translate(-50%); }
   	#tab {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
@@ -82,6 +83,7 @@ button {
   background-color: #4CAF50;
   color: white;
 }
+.simulator button:hover {background-color: red}
 img {
   border-radius: 8px;
 }
@@ -247,7 +249,7 @@ Moderated output resistance.<br>
 <h3>Expected waveform:<br>
 (a) The Input & Output Waveforms at 1 KHz
 </h3>
-<img src="freq_resp_ce_io.JPG" alt="circuit" width="350" height="250">
+<img src="freq_resp_ce_io.jpg" alt="circuit" width="350" height="250">
 <p>
 	<b>(b) Frequency Response Curve</b><br>
 In the usual application, mid band frequency range are defined as those frequencies at which the response has fallen to 3dB below the maximum gain (|A| max). These are shown as fL and fH and are called as the 3dB frequencies (Lower and Upper Cut-Off Frequencies respectively). The difference between higher cut-off and lower cut-off frequency is referred to as bandwidth (fH - fL).<br>
@@ -314,10 +316,18 @@ Bandwidth = fH – fL (in Hz)
 <section id="5" style="display: none;"><h2>simulator</h2>
 	<h2>Tutorial link for experiment:</h2>
 <p>refer this vedio for simulation</p>
-<a href="https://youtu.be/CbmKI9ncpJ8">click here</a>
+<video width="520" height="440" poster="ece_dept.jpg" controls>
+  <source src="diode_Demo.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+  
+  Your browser does not support the video tag.
+</video>
+
 <h2>Simulator </h2>
 <p>name:<b>MULTISIM</b></p>
-<p><b>To download software</b> <a href=" https://www.filehorse.com/download-multisim/download/">click here</a></p>
+<div class="simulator">
+<button onclick="myFunction()">Multisim Download</button>
+</div>
 <p><b> installation details</b><a href=" https://knowledge.ni.com/KnowledgeArticleDetails?id=kA03q000000YH77CAG&l=en-US">click here</a></p>
 </section>
 <section id="6" style="display: none;"><h2> take quiz</h2>
@@ -333,7 +343,10 @@ Book by Franz J. Monssen, Louis Nashelsky, and Robert Boylestad<br>
 </section>
 
 <script>
-	
+	function myFunction() {
+  
+window.open("https://www.filehorse.com/download-multisim/download/", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=700,left=700,width=600,height=500");
+}
 $(document).ready(function(){
   $("#area1").click(function(){
     $("#1").show();
