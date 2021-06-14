@@ -41,7 +41,7 @@ header {
 	float: left;
 }
 .logo img {
-	width: 50%;
+	width: 49%;
 	padding: 15px 0;
 }
 .welcome-text {
@@ -87,7 +87,7 @@ header {
 	}
 	.logo {
 		float: none;
-		width: 50%;
+		width: 25%;
 		text-align: center;
 		margin: auto;
 	}
