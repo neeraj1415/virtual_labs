@@ -38,14 +38,28 @@ var h=canvas.height/2;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     if(msg_sig=="cos"){
   ctx.font = "20px Georgia";
-ctx.fillText("(m(t)=Am*cos(2*pi*fm*t))", 300, 20);
+ctx.fillText("(m(t)=Am*cos(2*pi*fm*t))", 550, 20);
 ctx.font = "20px Verdana";
 ctx.fillText("t", 780, 100);
 }
 else if(msg_sig=="sin")
 {
     ctx.font = "20px Georgia";
-ctx.fillText("(m(t)=Am*sin(2*pi*fm*t))", 300, 20);
+ctx.fillText("(m(t)=Am*sin(2*pi*fm*t))", 550, 20);
+ctx.font = "20px Verdana";
+ctx.fillText("t", 780, 100);
+} 
+else if(msg_sig=="rectangle")
+{
+    ctx.font = "20px Georgia";
+ctx.fillText("message signal", 550, 20);
+ctx.font = "20px Verdana";
+ctx.fillText("t", 780, 100);
+} 
+else if(msg_sig=="pulse")
+{
+    ctx.font = "20px Georgia";
+ctx.fillText("pulse signal", 550, 20);
 ctx.font = "20px Verdana";
 ctx.fillText("t", 780, 100);
 } 
@@ -68,16 +82,53 @@ ctx.fillText("t", 780, 100);
     
     var x = 0;
     var y = 0;
-    
+    var a=frequency;
+    var f=frequency;
+    var m=amplitude;
     while (x < canvas.width) {
         if(msg_sig=="sin")
       y = (canvas.height / 2) + amplitude * Math.sin(2*Math.PI*frequency*x /sample_frequency);
   else if(msg_sig=="cos")
      y = (canvas.height / 2) + amplitude * Math.cos(2*Math.PI*frequency*x /sample_frequency);
+ else if(msg_sig=="pulse")
+ {
+    if(a>=f/2){
+   y = h-m;
+   a--;
+         }
+else if(a>0&&a<f/2){
+    y=h;
+    a--;
+         }
+else if(a==0)
+     {
+    y=h;
+    a=f;
+      }
+
+ }
+ else if(msg_sig=="rectangle")
+ {document.getElementById('amplitude').value=20;
+
+    if(a>=f/2){
+   y = h-20;
+   a--;
+}
+else if(a>0&&a<f/2){
+    y=h+20;
+    a--;
+}
+else if(a==0)
+{
+    y=h;
+    a=f;
+}
+ }
       ctx.lineTo(x, y);
       
       x += 1;
     }
+
     
     ctx.stroke();
   }
@@ -97,16 +148,17 @@ var h=canvas.height/2;
 if(carr_sig=="sin"){
     ctx.font = "20px Georgia";
 
-ctx.fillText("(c(t)=Ac*sin(2*pi*fc*t))", 300, 20);
+ctx.fillText("(c(t)=Ac*sin(2*pi*fc*t))", 550, 20);
 ctx.font = "20px Verdana";
 ctx.fillText("t", 780, 100);}
 else if(carr_sig=="cos"){
     ctx.font = "20px Georgia";
 
-ctx.fillText("(c(t)=Ac*cos(2*pi*fc*t))", 300, 20);
+ctx.fillText("(c(t)=Ac*cos(2*pi*fc*t))", 550, 20);
 ctx.font = "20px Verdana";
 ctx.fillText("t", 780, 100);
 }
+
 
 
 
@@ -149,7 +201,7 @@ var h=canvas.height/2;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.font = "20px Georgia";
 
-ctx.fillText("s(t)=[1+[m(t)/Ac]]*c(t)", 300, 20);
+ctx.fillText("s(t)=[1+[m(t)/Ac]]*c(t)", 550, 20);
 ctx.font = "20px Verdana";
 ctx.fillText("t", 780, 100);
      ctx.beginPath(); // Draw a new path
@@ -164,7 +216,10 @@ ctx.fillText("t", 780, 100);
     
     var x = 0;
     var y = 0;
-    
+     var a=frequency;
+    var f=frequency;
+    var m=amplitude;
+    var temp=0;
     while (x < canvas.width) {
         if(msg_sig=="cos"&&carr_sig=="sin")
       y = (canvas.height / 2) + (1+(amplitude/amplitude2) * Math.cos(2*Math.PI*frequency*x /sample_frequency))* (amplitude2 * Math.sin(2*Math.PI*frequency2*x /sample_frequency));
@@ -174,6 +229,95 @@ ctx.fillText("t", 780, 100);
       y = (canvas.height / 2) + (1+(amplitude/amplitude2) * Math.sin(2*Math.PI*frequency*x /sample_frequency))* (amplitude2 * Math.sin(2*Math.PI*frequency2*x /sample_frequency));
     else if(msg_sig=="sin"&&carr_sig=="cos")
       y = (canvas.height / 2) + (1+(amplitude/amplitude2) * Math.cos(2*Math.PI*frequency*x /sample_frequency))* (amplitude2 * Math.cos(2*Math.PI*frequency2*x /sample_frequency));
+  else if(msg_sig=="pulse"&&carr_sig=="cos")
+  {   
+    if(a>=f/2){
+   temp = h-m;
+   a--;
+         }
+else if(a>0&&a<f/2){
+    temp=0;
+    a--;
+         }
+else if(a==0)
+     {
+    temp=h;
+    a=f;
+      }
+
+ 
+
+      y = (canvas.height / 2) + (1+ (temp/amplitude2))* (amplitude2 * Math.cos(2*Math.PI*frequency2*x /sample_frequency));
+  }
+  else if(msg_sig=="pulse"&&carr_sig=="sin")
+  {   
+    if(a>=f/2){
+   temp = h-m;
+   a--;
+         }
+else if(a>0&&a<f/2){
+    temp=0;
+    a--;
+         }
+else if(a==0)
+     {
+    temp=h;
+    a=f;
+      }
+
+ 
+
+      y = (canvas.height / 2) + (1+ (temp/amplitude2))* (amplitude2 * Math.sin(2*Math.PI*frequency2*x /sample_frequency));
+  }
+
+else if(msg_sig=="rectangle"&&carr_sig=="sin")
+  {   
+    if(a>=f/2){
+   temp = h-20;
+   a--;
+         }
+else if(a>0&&a<f/2){
+    temp=h+20;
+    a--;
+         }
+else if(a==0)
+     {
+    temp=h;
+    a=f;
+      }
+
+ 
+
+      y = (canvas.height / 2) + (1+ (temp/amplitude2))* (amplitude2 * Math.sin(2*Math.PI*frequency2*x /sample_frequency));
+  }
+
+  else if(msg_sig=="rectangle"&&carr_sig=="cos")
+  {   
+    if(a>=f/2){
+   temp = h-20;
+   a--;
+         }
+else if(a>0&&a<f/2){
+    temp=h+20;
+    a--;
+         }
+else if(a==0)
+     {
+    temp=h;
+    a=f;
+      }
+
+ 
+
+      y = (canvas.height / 2) + (1+ (temp/amplitude2))* (amplitude2 * Math.cos(2*Math.PI*frequency2*x /sample_frequency));
+  }
+
+
+
+
+
+
+
       ctx.lineTo(x, y);
       
       x += 1;
@@ -212,6 +356,8 @@ plotSine3(amplitude2+5,amplitude+5,frequency2,frequency,samp_frequency,msg_sig,c
  <select id="mySelect">
     <option value="cos">cos</option>
     <option value="sin">sin</option>
+     <option value="pulse">pulse</option>
+      <option value="rectangle">rectangle</option>
     
    
   </select><br>
