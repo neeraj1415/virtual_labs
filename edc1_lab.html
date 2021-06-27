@@ -1,82 +1,83 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
+<head><style>
+  #header{
+    background-color: red;
+    height: 160px;
+    text-align: center;
+    padding-top: 6px;
+    margin-bottom: -20px;
+  }
+
+  #navigation{
+    line-height: 70px;
+    background-color: #187bcd;
+    width: 280px;
+        float: left;
+      padding: 5px;
+        height: 1700px;
+      
+  }
+  #section{
+    
+    background-color:#81B622;
+    height: 1700px;
+    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: scroll; 
+
+      
+  }
   
-#tab {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 70%;
+   .button{
+
+  font-family: "roboto",sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  background: #00FFFF;
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  border-radius:8px;
 }
-
-#tab td, #customers th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#tab tr:nth-child(even){background-color: #f2f2f2;}
-
-#tab tr:hover {background-color: #ddd;}
-
-#tab th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #04AA6D;
-  color: white;
-}
-
-
-
+  
 </style>
 
-</head>
 <body>
+  <div id="header">
+    <h1>National Institute Of Technology, Warangal</h1>
+    <h1>Virtual Labs-ECE</h1> 
+    </div>
+     <div id="navigation">
+    <h1>LIST OF LABS</h1>
+    
+    <a href="edc1_lab.html"  class="button">EDC LAB-I</a><br>
+    <a href=""  class="button">EDC LAB-II</a><br>
+    <a href=""  class="button">DSD LAB-I</a><br>
+    <a href=""  class="button">DSD LAB-II</a><br>
+    <a href=""  class="button">ANALOG COMM LAB</a><br>
+    <a href=""  class="button">DIGITAL COMM LAB</a><br>
+    <a href=""  class="button">SIGNALS AND SYSTEMS LAB</a><br>
+    
+  </div><div id="section">
+    
 
-<h1 align="center">VIRTUAL LAB NITW</h1>
-<h2 align="center">Electronics and Communication Engineering</h2>
+<h1 style=" float:left; display:inline; padding: 10px; margin: 20px 50px 20px 450px;">EDC1 LAB</h1><br>
+    
+    <a href="ece_exp1.html"  class="button" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 500px;">EXPERIMENT-1</a><br>
+    <a href=""  class="button" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 500px;">EXPERIMENT-2</a><br>
+    <a href=""  class="button" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 500px;">EXPERIMENT-3</a><br>
+    <a href=""  class="button" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 500px;">EXPERIMENT-4</a><br>
+    <a href=""  class="button" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 500px;">EXPERIMENT-5</a><br>
+    <a href=""  class="button" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 500px;">EXPERIMENT-6</a><br>
+    <a href=""  class="button" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 500px;">EXPERIMENT-7</a><br>
+    
 
-<h2>List of experiments:-</h2>
-<table id="tab">
-  <tr>
-    <th>S.no</th>
-    <th>Experiment name</th> 
-    <th>experiments details</th>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>Frequency Response Of CE  Amplifier</td>
-    <td><a href="ece_exp1.html">click here</a></td>
-    
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>RC LOW PASS STEP RESPONSE</td>
-    <td><a href="ece2.html">click here</td>
-    
-  </tr>
-  <tr>
-    <td>3</td>
-    <td></td>
-    <td></td>
+</div>
+  
 
-  </tr>
-  <tr>
-    <td>4</td>
-    <td></td>
-    <td></td>
-    
-  </tr>
-  <tr>
-    <td>5</td>
-    <td></td>
-    <td></td>
-    
-  </tr>
-</table>
-  <h2>Simulator used in this lab for simulation: </h2>
-<p>name:<b>MULTISIM</b></p>
-<p><b>To download software</b> <a href=" https://www.filehorse.com/download-multisim/download/">click here</a></p>
-<p><b> installation details</b><a href=" https://knowledge.ni.com/KnowledgeArticleDetails?id=kA03q000000YH77CAG&l=en-US">click here</a></p>
+
 </body>
-</html>

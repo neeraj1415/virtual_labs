@@ -1,99 +1,80 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
+<head><style>
+  #header{
+    background-color: red;
+    height: 160px;
+    text-align: center;
+    padding-top: 6px;
+    margin-bottom: -20px;
+  }
 
-h1{
-  font-size: 30px;
-  color:#fff;
-  text-transform: uppercase;
-  font-weight: 300;
+  #navigation{
+    line-height: 70px;
+    background-color: #187bcd;
+    width: 280px;
+        float: left;
+      padding: 5px;
+        height: 1700px;
+      
+  }
+  #section{
+    
+    background-color:#81B622;
+    height: 1700px;
+    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: scroll; 
+
+      
+  }
+  
+   .button{
+
+  font-family: "roboto",sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  background: #00FFFF;
+  width: 200px;
+  padding: 10px;
   text-align: center;
-  margin-bottom: 15px;
-}
-table{
-  width:100%;
-  table-layout: fixed;
-  border-collapse: collapse;
-
-}
-
-th{
-  padding: 20px 15px;
-  text-align: left;
-  font-weight: 500;
-  font-size: 20px;
-  color: #fff;
+  text-decoration: none;
   text-transform: uppercase;
-  border: solid 5px rgba(255,255,255,0.1);
+  color: #000;
+  border-radius:8px;
 }
-td{
-  padding: 15px;
-  text-align: left;
-  vertical-align:middle;
-  font-weight: 300;
-  font-size: 17px;
-  color: #fff;
-   border: solid 3px rgba(255,255,255,0.1);
-}
-
-
-/* demo styles */
-
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
-body{
-  background: -webkit-linear-gradient(left, #25c481, #25b7c4);
-  background: linear-gradient(to right, #25c481, #25b7c4);
-  font-family: 'Roboto', sans-serif;
-
-}
-
+  
 </style>
 
-</head>
 <body>
+  <div id="header">
+    <h1>National Institute Of Technology, Warangal</h1>
+    <h1>Virtual Labs-ECE</h1> 
+    </div>
+     <div id="navigation">
+    <h1>LIST OF LABS</h1>
+    
+    <a href="edc1_lab.html"  class="button">EDC LAB-I</a><br>
+    <a href=""  class="button">EDC LAB-II</a><br>
+    <a href=""  class="button">DSD LAB-I</a><br>
+    <a href=""  class="button">DSD LAB-II</a><br>
+    <a href=""  class="button">ANALOG COMM LAB</a><br>
+    <a href=""  class="button">DIGITAL COMM LAB</a><br>
+    <a href=""  class="button">SIGNALS AND SYSTEMS LAB</a><br>
+    
+  </div><div id="section">
+    
 
-<h1 align="center">VIRTUAL LAB NITW</h1>
-<h2 align="center">Electronics and Communication Engineering</h2>
+<a href="edc1_lab.html"><img style=" float:left; display:inline; padding: 10px" src="edc1_logo.jpg" width="350" height="180" alt="not available" /></a>
+<a href=""><img style=" float:left; display:inline; padding: 10px" src="edc2_logo.jpg" width="350" height="180" alt="not available" /></a>
+<a href="#"><img style=" float:left; display:inline;padding: 10px" src="dsd1_logo.jpg" width="350" height="180" alt="not available"/></a>
+<a href="#"><img style=" float:left; display:inline;padding: 10px" src="dsd2_logo.jpg" width="350" height="180" alt="not available" /></a>
+<a href="#"><img style=" float:left; display:inline;padding: 10px" src="analogcomm_logo.jpg" width="350" height="180" alt="not available" /></a>
+<a href="#"><img style=" float:left; display:inline;padding: 10px" src="digitalcomm_log.jpg" width="350" height="180" alt="not available" /></a>
+<a href="#"><img style=" float:left; display:inline;padding: 10px" src="sslab_logo.jpg" width="350" height="180" alt="not available" /></a>
 
-<h2>List of labs:-</h2>
-<table id="tab">
-  <tr>
-    <th>S.no</th>
-    <th>lab name</th> 
-    <th>experiments in lab</th>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>EDC 1 LAB</td>
-    <td><a href="edc1_lab.html">click here</a></td>
+</div>
+  
 
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>lab 2</td>
-    <td><a href="ece_lab2.html">click here</td>
-
-  </tr>
-  <tr>
-    <td>3</td>
-    <td></td>
-    <td></td>
-
-  </tr>
-  <tr>
-    <td>4</td>
-    <td></td>
-    <td></td>
-
-  </tr>
-  <tr>
-    <td>5</td>
-    <td></td>
-    <td></td>
-
-  </tr>
-</table>
 
 </body>
-</html>
