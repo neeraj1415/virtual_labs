@@ -273,11 +273,11 @@ else if(a==0)
 else if(msg_sig=="rectangle"&&carr_sig=="sin")
   {   
     if(a>=f/2){
-   temp = h-20;
+   temp = h-m;
    a--;
          }
 else if(a>0&&a<f/2){
-    temp=h+20;
+    temp=h+m;
     a--;
          }
 else if(a==0)
@@ -294,11 +294,11 @@ else if(a==0)
   else if(msg_sig=="rectangle"&&carr_sig=="cos")
   {   
     if(a>=f/2){
-   temp = h-20;
+   temp = h-m;
    a--;
          }
 else if(a>0&&a<f/2){
-    temp=h+20;
+    temp=h+m;
     a--;
          }
 else if(a==0)
@@ -340,9 +340,9 @@ var amplitude = document.getElementById('amplitude').value;
        var msg_sig = document.getElementById("mySelect").value;
         var carr_sig=document.getElementById("mySelect2").value;
          document.getElementById("demo").innerHTML = amplitude/amplitude2;
-plotSine(amplitude+5,frequency,samp_frequency,msg_sig);
-plotSine2(amplitude2+5,frequency2,samp_frequency,carr_sig);
-plotSine3(amplitude2+5,amplitude+5,frequency2,frequency,samp_frequency,msg_sig,carr_sig);
+plotSine(amplitude,frequency,samp_frequency,msg_sig);
+plotSine2(amplitude2,frequency2,samp_frequency,carr_sig);
+plotSine3(amplitude2,amplitude,frequency2,frequency,samp_frequency,msg_sig,carr_sig);
 
 }
     </script>
@@ -362,7 +362,7 @@ plotSine3(amplitude2+5,amplitude+5,frequency2,frequency,samp_frequency,msg_sig,c
    
   </select><br>
     <lable>Amplitude</lable>
-    <input type="number" id="amplitude" value="2"><br><br>
+    <input type="number" id="amplitude" value="20"><br><br>
   
     <lable>Frequency</lable>
     <input type="number" id="Frequency" value="10"><br><br>
@@ -379,7 +379,7 @@ plotSine3(amplitude2+5,amplitude+5,frequency2,frequency,samp_frequency,msg_sig,c
    
 </select><br><br>
 <lable>Amplitude:</lable>
-    <input type="number" id="amplitude2" value="2"><br><br>
+    <input type="number" id="amplitude2" value="20"><br><br>
     <lable>Frequency:</lable>
     <input type="number" id="Frequency2" value="100"><br><br>
  <lable>Modulation Index(Am/Ac):</lable>
