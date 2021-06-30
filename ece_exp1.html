@@ -10,6 +10,33 @@
     <link rel="stylesheet" href="style1.css">
  
   <style>
+    #header{
+    background-color:grey;
+    height: 160px;
+    text-align: center;
+    padding-top: 6px;
+    margin-bottom: -20px;
+  }
+
+  #navigation{
+    line-height: 70px;
+    background-color: grey;
+    width: 280px;
+        float: left;
+      padding: 5px;
+        height: 3000px;
+
+  }
+  #main1{
+    
+    background-color:white;
+    height: 3000px;
+    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: scroll; 
+
+      
+  }
      video { margin-left: 40vw; transform: translate(-50%); }
   	#tab {
   font-family: Arial, Helvetica, sans-serif;
@@ -51,7 +78,7 @@ h1   {
   padding: 10px;
 }
  .button {
-  background-color: blue; /* Green */
+  background-color: grey; /* Green */
   border: none;
   color: white;
   padding: 16px 32px;
@@ -63,6 +90,9 @@ h1   {
   transition-duration: 0.4s;
   cursor: pointer;
  z-index:10;
+}
+p{
+  color:white;
 }
 button {
   background-color: black; /* Green */
@@ -78,16 +108,25 @@ button {
   cursor: pointer;
   margin:3px 3px 3px 3px;
 }
+a{
+  color:black;
+}
 .button button:hover {background-color: grey}
 .button:hover {
   background-color: #4CAF50;
   color: white;
 }
 .simulator button:hover {background-color: red}
+a:hover {background-color: red}
 img {
   border-radius: 8px;
 }
-
+.topleft {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+} 
      
 </style>
 
@@ -95,20 +134,33 @@ img {
 
 </head>
 <body>
+ <div id="header">
+   <div class="topleft">
+        <a href="home1.html"><img src="home.JPG" alt="home" width="50" height="50"></a>
+
+        <p>home</p>
+       </div>
 	<div class="content">
+   
 		 <h1 style="text-align:center;">Frequency response of CE amplifier</h1>
+    </div>
+    <div id="navigation">
 	<div class="wrapper">
 	 
       </div>
-<div class="button">
-<button id="area1">Introduction</button>
-<button id="area2">Theory</button>
-<button id="area3">objective</button>
-<button id="area4">procedure</button>
-<button id="area5" onclick="myfunction()">simulator</button>
-<button id="area6">quiz</button>
-<button id="area7">references</button>
+<div class="button" >
+  
+ <a href="edc1_lab.html"> <button >EDC-1</button></a><br>
+<button id="area1">Introduction</button><br>
+<button id="area2">Theory</button><br>
+<button id="area3">objective</button><br>
+<button id="area4">procedure</button><br>
+<button id="area5" onclick="myfunction()">simulator</button><br>
+<button id="area6">quiz</button><br>
+<button id="area7">references</button><br>
 </div>
+</div>
+<div id="main">
 <section id="1">
 	<h2>Introduction</h2>
       <p style="font-size:20px"><b>About the Experiment</b></p>
@@ -316,7 +368,7 @@ Bandwidth = fH – fL (in Hz)
 <section id="5" style="display: none;"><h2>simulator</h2>
 	<h2>Tutorial link for experiment:</h2>
 <p>refer this vedio for simulation</p>
-<video width="920" height="740" poster="ece_dept.jpg" controls>
+<video width="620" height="640" poster="ece_dept.jpg" controls style="float:right">
   <source src="diode_Demo.mp4" type="video/mp4">
     <source src="movie.ogg" type="video/ogg">
   
@@ -331,16 +383,17 @@ Bandwidth = fH – fL (in Hz)
 <p><b> installation details</b><a href=" https://knowledge.ni.com/KnowledgeArticleDetails?id=kA03q000000YH77CAG&l=en-US">click here</a></p>
 </section>
 <section id="6" style="display: none;"><h2> take quiz</h2>
-<a href="qd.html">attempt quiz</a>
+<a href="qd.html" style="color:black">attempt quiz</a>
 </section>
 <section id="7" style="display: none;">
-	<h2>references</h2>
+	<h2>references</h2><p>
 	1.The Art of Electronics
 Textbook by Paul Horowitz and Winfield Hill<br>
      2. Electronic Devices and Circuits
 Book by Franz J. Monssen, Louis Nashelsky, and Robert Boylestad<br>
-3.<b>youtube lecture</b>: <a href="https://www.youtube.com/watch?v=L6BZEJ4wH4I">click here</a> <br>                      
+3.<b>youtube lecture</b>: <a href="https://www.youtube.com/watch?v=L6BZEJ4wH4I">click here</a> <br> </p>                     
 </section>
+</div>
 
 <script>
 	function myFunction() {

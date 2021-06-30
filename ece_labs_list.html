@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head><style>
-  #header{
-    background-color: red;
+<head>
+
+
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+ 
+  <style>
+    #header{
+    background-color:red;
     height: 160px;
     text-align: center;
     padding-top: 6px;
@@ -11,31 +20,111 @@
 
   #navigation{
     line-height: 70px;
-    background-color: #187bcd;
+    background-color: blue;
     width: 280px;
         float: left;
       padding: 5px;
-        height: 1700px;
-      
+        height: 1000px;
+
   }
-  #section{
+  #main1{
     
-    background-color:#81B622;
-    height: 1700px;
+    background-color:green;
+    height: 1000px;
     overflow: scroll;
     overflow-x: scroll;
     overflow-y: scroll; 
 
       
   }
-  
-   .button{
+     video { margin-left: 40vw; transform: translate(-50%); }
+    #tab {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+}
+
+#tab td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#tab tr:nth-child(even){background-color: #f2f2f2;}
+
+#tab tr:hover {background-color: #ddd;}
+
+#tab th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+    body {
+  background:#81B622;
+}
+h1   {
+  background:red;
+  font-size:40px;
+  color: black;
+  text-align:center;
+  padding: 20px;
+}
+.content {
+  max-width: 1300px;
+  margin: auto;
+  background: white;
+  padding: 10px;
+}
+ .button {
+  background-color: blue; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+ z-index:10;
+}
+p{
+  color:white;
+}
+button {
+  background-color: black; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin:3px 3px 3px 3px;
+}
+a{
+  color:black;
+}
+.button button:hover {background-color: grey}
+
+.simulator button:hover {background-color: red}
+a:hover {background-color: red}
+img {
+  border-radius: 8px;
+}
+   .button2{
 
   font-family: "roboto",sans-serif;
   font-size: 18px;
   font-weight: bold;
   background: #00FFFF;
-  width: 200px;
+  width: 600px;
   padding: 10px;
   text-align: center;
   text-decoration: none;
@@ -43,38 +132,209 @@
   color: #000;
   border-radius:8px;
 }
-  
+  .topleft {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+}   
 </style>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
 <body>
-  <div id="header">
-    <h1>National Institute Of Technology, Warangal</h1>
-    <h1>Virtual Labs-ECE</h1> 
-    </div>
-     <div id="navigation">
-    <h1>LIST OF LABS</h1>
-    
-    <a href="edc1_lab.html"  class="button">EDC LAB-I</a><br>
-    <a href=""  class="button">EDC LAB-II</a><br>
-    <a href=""  class="button">DSD LAB-I</a><br>
-    <a href=""  class="button">DSD LAB-II</a><br>
-    <a href=""  class="button">ANALOG COMM LAB</a><br>
-    <a href=""  class="button">DIGITAL COMM LAB</a><br>
-    <a href=""  class="button">SIGNALS AND SYSTEMS LAB</a><br>
-    
-  </div><div id="section">
-    
-
-<a href="edc1_lab.html"><img style=" float:left; display:inline; padding: 10px" src="edc1_logo.JPG" width="350" height="180" alt="not available" /></a>
-<a href=""><img style=" float:left; display:inline; padding: 10px" src="edc2_logo.JPG" width="350" height="180" alt="not available" /></a>
-<a href="#"><img style=" float:left; display:inline;padding: 10px" src="dsd1_logo.JPG" width="350" height="180" alt="not available"/></a>
-<a href="#"><img style=" float:left; display:inline;padding: 10px" src="dsd2_logo.JPG" width="350" height="180" alt="not available" /></a>
-<a href="#"><img style=" float:left; display:inline;padding: 10px" src="analogcomm_logo.JPG" width="350" height="180" alt="not available" /></a>
-<a href="#"><img style=" float:left; display:inline;padding: 10px" src="digitalcomm_log.JPG" width="350" height="180" alt="not available" /></a>
-<a href="#"><img style=" float:left; display:inline;padding: 10px" src="sslab_logo.JPG" width="350" height="180" alt="not available" /></a>
-
-</div>
+ <div id="header">
+       <div class="topleft">
+        <a href="home1.html"><img src="home.JPG" alt="home" width="50" height="50"></a><br>
+        <p>home</p>
+       </div>
+     <h1 style="text-align:center;">National Institute Of Technology, Warangal <br>Virtual Labs-ECE</h1>
+     
+  </div><br>
+    <div id="navigation">
+  <div class="wrapper">
+   
+      </div>
+<div class="button" >
   
+<h2 style="color:black;font-size:30px">LIST OF LABS</h2>
+<button id="area1">EDC-1</button><br>
+<button id="area2">EDC-2</button><br>
+<button id="area3">DSD LAB 1</button><br>
+<button id="area4">DSD 2</button><br>
+<button id="area5" >ANALOG COMM</button><br>
+<button id="area6">DIGITAL COMM</button><br>
+<button id="area7">SS LAB</button><br>
+</div>
+</div>
+<div id="main">
+<section id="1">
+  <br><br><h1 style=" background-color:grey; display:inline; padding: 10px; margin: 20px 50px 20px 550px;">EDC-1</h1><br><br>
+ 
+    <a href="ece_exp1.html"  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">1.Frequency response of transistor</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">2. Study of Instruments</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">3. Study of Components</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">4. V-I Characteristics of Si and Ge Diodes</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">5. Zener Diode Characteristics and Zener Diode as Voltage Regulator</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">6. Half Wave and Full Wave Rectifiers</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">7. Rectifiers with Filters</a><br>
+    
 
+</section>
+<section id="2" style="display: none;"> <br><br><h1 style=" background-color:grey; display:inline; padding: 10px; margin: 20px 50px 20px 550px;">EDC-2</h1><br><br>
+ 
+    <a href="ece_exp1.html"  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">1. Single stage BJT amplifier</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">2. Two stage BJT amplifier</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">3. FET amplifier</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">4. Differential amplifier</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">5. Voltage series feedback amplifier</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">6. Voltage shunt feedback amplifier</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">7. Current series feedback amplifier</a><br>
+    
+</section>
 
+<section id="3" style="display: none;">
+  
+   <br><br><h1 style=" background-color:grey; display:inline; padding: 10px; margin: 20px 50px 20px 500px;">DSD-1</h1><br><br>
+ 
+    <a href="ece_exp1.html"  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">a) 2-to-4 decoder</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">b) 8-to-3 encoder</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">c) 4:1 mux</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">d) full adder/subtractor</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">e) 8-bit parity generator/checker</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">f) 8-bit Kogge-stone adder</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">g) 16:1 mux realization using 4:1 mux</a><br>
+    
+</section>
+<section id="4" style="display: none;">
+  <br><br><h1 style=" background-color:grey; display:inline; padding: 10px; margin: 20px 50px 20px 500px;">DSD-2</h1><br><br>
+ 
+    <a href="ece_exp1.html"  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">a) 16:1 mux realization using 4:1 mux</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">b) 4-bit ripple carry adder using full adder</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">c) 8-bit adder using 4-bit ripple carry adder</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">d) 8-bit carry select adder using 4-bit ripple carry adder</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">e) 16-bit adder by cascading an 8-bit Kogge-stone adder/Ripple carry adder </a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">f) 4-bitasynchronousup/downcounter</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">g) 8-bitasynchronousup/downcounter</a><br>
+    
+</section>
+<section id="5" style="display: none;">
+   <br><br><h1 style=" background-color:grey; display:inline; padding: 10px; margin: 20px 50px 20px 450px;">ANALOG COMM</h1><br><br>
+ 
+    <a href="ece_exp1.html"  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">EXPERIMENT-1</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">EXPERIMENT-2</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">EXPERIMENT-3</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">EXPERIMENT-4</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">EXPERIMENT-5</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">EXPERIMENT-6</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">EXPERIMENT-7</a><br>
+    
+</section>
+<section id="6" style="display: none;">
+  <br><br><h1 style=" background-color:grey; display:inline; padding: 10px; margin: 20px 50px 20px 450px;">DIGITAL COMM</h1><br><br>
+ 
+    <a href="ece_exp1.html"  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">EXPERIMENT-1</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">EXPERIMENT-2</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">EXPERIMENT-3</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">EXPERIMENT-4</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">EXPERIMENT-5</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">EXPERIMENT-6</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">EXPERIMENT-7</a><br>
+                   
+</section>
+<section id="7" style="display: none;">
+   <br><br><h1 style=" background-color:grey; display:inline; padding: 10px; margin: 20px 50px 20px 520px;">SS_LAB</h1><br><br>
+ 
+    <a href="ece_exp1.html"  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">EXPERIMENT-1</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">EXPERIMENT-2</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">EXPERIMENT-3</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">EXPERIMENT-4</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">EXPERIMENT-5</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">EXPERIMENT-6</a><br>
+    <a href=""  class="button2" style=" float:left; display:inline; padding: 10px; margin: 10px 50px 10px 300px;">EXPERIMENT-7</a><br>
+                   
+  </section>
+</div>
+
+<script>
+  function myFunction() {
+  
+window.open("https://www.filehorse.com/download-multisim/download/", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=700,left=700,width=600,height=500");
+}
+$(document).ready(function(){
+  $("#area1").hover(function(){
+    $("#1").show();
+    $("#2").hide();
+     $("#3").hide();
+      $("#4").hide();
+       $("#5").hide();
+        $("#6").hide();
+         $("#7").hide();
+
+  });
+  $("#area2").hover(function(){
+    $("#1").hide();
+    $("#2").show();
+     $("#3").hide();
+      $("#4").hide();
+       $("#5").hide();
+        $("#6").hide();
+         $("#7").hide();
+
+  });
+  $("#area3").hover(function(){
+    $("#1").hide();
+    $("#2").hide();
+     $("#3").show();
+      $("#4").hide();
+       $("#5").hide();
+        $("#6").hide();
+         $("#7").hide();
+
+  });
+  $("#area4").hover(function(){
+    $("#1").hide();
+    $("#2").hide();
+     $("#3").hide();
+      $("#4").show();
+       $("#5").hide();
+        $("#6").hide();
+         $("#7").hide();
+
+  });
+  $("#area5").hover(function(){
+    $("#1").hide();
+    $("#2").hide();
+     $("#3").hide();
+      $("#4").hide();
+       $("#5").show();
+        $("#6").hide();
+         $("#7").hide();
+
+  });
+  $("#area6").hover(function(){
+    $("#1").hide();
+    $("#2").hide();
+     $("#3").hide();
+      $("#4").hide();
+       $("#5").hide();
+        $("#6").show();
+         $("#7").hide();
+
+  });
+  $("#area7").hover(function(){
+    $("#1").hide();
+    $("#2").hide();
+     $("#3").hide();
+      $("#4").hide();
+       $("#5").hide();
+        $("#6").hide();
+         $("#7").show();
+
+  });
+});
+</script>
+</div>
 </body>
+</html>
