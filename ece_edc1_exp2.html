@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	 <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+ 
+  <style>
+    #header{
+    background-color:grey;
+    height: 160px;
+    text-align: center;
+    padding-top: 6px;
+    margin-bottom: -20px;
+  }
+
+  #navigation{
+    line-height: 70px;
+    background-color: grey;
+    width: 280px;
+        float: left;
+      padding: 5px;
+        height: 3000px;
+
+  }
+  #main1{
+    
+    background-color:white;
+    height: 3000px;
+    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: scroll; 
+
+      
+  }
+     video { margin-left: 40vw; transform: translate(-50%); }
+  	#tab {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+}
+
+#tab td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#tab tr:nth-child(even){background-color: #f2f2f2;}
+
+#tab tr:hover {background-color: #ddd;}
+
+#tab th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+  	body {
+  background: #555;
+}
+h1   {
+	background:black;
+	font-size:40px;
+	color: white;    
+	text-align:center;
+	padding: 20px;
+}
+.content {
+  max-width: 1300px;
+  margin: auto;
+  background: white;
+  padding: 10px;
+}
+ .button {
+  background-color: grey; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+ z-index:10;
+}
+p{
+  color:white;
+}
+button {
+  background-color: black; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin:3px 3px 3px 3px;
+}
+a{
+  color:black;
+}
+.button button:hover {background-color: grey}
+.button:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.simulator button:hover {background-color: red}
+a:hover {background-color: red}
+img {
+  border-radius: 8px;
+}
+.topleft {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+} 
+     
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+ <div id="header">
+   <div class="topleft">
+        <a href="home1.html"><img src="home.JPG" alt="home" width="50" height="50"></a>
+
+        <p>home</p>
+       </div>
+	<div class="content">
+   
+		 <h1 style="text-align:center;">ZENER DIODE CHARACTERISTICS AND VOLTAGE REGULATOR</h1>
+    </div>
+    <div id="navigation">
+	<div class="wrapper">
+	 
+      </div>
+<div class="button" >
+  
+ <a href="edc1_lab.html"> <button >EDC-1</button></a><br>
+<button id="area1">Introduction</button><br>
+<button id="area2">Theory</button><br>
+<button id="area3">objective</button><br>
+<button id="area4">procedure</button><br>
+<button id="area5" onclick="myfunction()">simulator</button><br>
+<button id="area6">quiz</button><br>
+<button id="area7">references</button><br>
+</div>
+</div>
+<div id="main">
+<section id="1">
+	<h2>Introduction</h2>
+      <p style="font-size:20px"><b>About the Experiment</b></p>
+      <p>This experiment enables a student to learn<br><br>
+Students are able to
+To perform DC analysis of a single-stage BJT amplifier.
+· To do small signal analysis and find the basic properties of a BJT amplifier.
+· To simulate the design in PSPICE and verify operation.
+______________
+<br>
+</p>
+
+</section>
+<section id="2" style="display: none;"><H2>THEORY</H2>
+
+A zener diode is heavily doped p-n junction diode, specially made to operate in the break down
+region. A p-n junction diode normally does not conduct when reverse biased. But if the reverse
+bias is increased, at a particular voltage it starts conducting heavily. This voltage is called
+Break down Voltage. High current through the diode can permanently damage the device.
+To avoid high current, we connect a resistor in series with zener diode. Once the diode starts
+conducting it maintains almost constant voltage across the terminals whatever may be the
+current through it, i.e., it has very low dynamic resistance. It is used in voltage regulators.
+</section>
+<section id="3" style="display: none;">
+	
+	<H2>AIM:-</H2><p>Plot the V-I characteristics of a Zener diode, find zener breakdown voltage in reverse bias
+condition, find static and dynamic resistance in both forward and reverse bias conditions and
+perform zener diode voltage regulator</p>
+</section>
+<section id="4" style="display: none;"><H2>CIRCUIT</H2>	
+<img src="freq_resp_ce_ckt_diagram.png" alt="circuit" width="350" height="250">
+<h2>components required</h2>
+<table id="tab">
+ <tr>
+    <th>S.no</th>
+    <th>name</th> 
+    <th>quantity</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>DC Power Supply(0-15V)</td>
+    <td> </a>1</td>
+    
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>zener diode(4.7V,6.2V)</td>
+    <td>ONE EACH</td>
+    
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Carbon film resistor(1kohm,1/2W)</td>
+    <td>ONE EACH</td>
+
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>dc voltmeter(0-10,10-20)</td>
+    <td>ONE EACH</td>
+    
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>DC ammeter(0-200mA,0-20mA)</td>
+    <td>ONE EACH</td>
+    
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>Connerting wires(5A)</td>
+    <td>10</td>
+    
+  </tr>
+
+</table>
+<H2>PROCEDURE</H2>
+<p>
+	
+</p>
+<h3>Observation Tables:</h3>
+LINE REGULATION
+Keeping load current constant at  = 5, The input voltage is varied from 8 V to 14V and
+corresponding observations are made.
+(volts)  (volts)<br>
+LOAD REGULATION
+Keeping input voltage at 10V, the load current is varied from 0 to 5 mA and observations are
+made. For taking reading corresponding to no load ( IL = 0 ), the loading rheostat may be
+disconnected
+
+<table id="tab">
+  <tr>
+    <th>Vin(volts)</th>
+    <th>	Vo(Volts)</th>
+   </th>
+    
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    
+  </tr>
+  <tr>
+   <td></td>
+    <td></td>
+    
+    
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+   
+  </tr>
+  <tr>
+   <td></td>
+    <td></td>
+   
+    
+  </tr>
+  <tr>
+   <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+<h2>Results</h2>
+<p>% Line Regulation = (VHL-VLL) / VNOM x100 = ------------ %<br>
+% voltage regulation = (VNL-VFL)/VFLx100 =----------%<br>
+</p>
+</section>
+<section id="5" style="display: none;"><h2>simulator</h2>
+	<h2>Tutorial link for experiment:</h2>
+<p>refer this vedio for simulation</p>
+<video width="620" height="640" poster="ece_dept.jpg" controls style="float:right">
+  <source src="diode_Demo.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+  
+  Your browser does not support the video tag.
+</video>
+
+<h2>Simulator </h2>
+<p>name:<b>MULTISIM</b></p>
+<div class="simulator">
+<button onclick="myFunction()">Multisim Download</button>
+</div>
+<p><b> installation details</b><a href=" https://knowledge.ni.com/KnowledgeArticleDetails?id=kA03q000000YH77CAG&l=en-US">click here</a></p>
+</section>
+<section id="6" style="display: none;"><h2> take quiz</h2>
+<a href="qd.html" style="color:black">attempt quiz</a>
+</section>
+<section id="7" style="display: none;">
+	<h2>references</h2><p>
+	1.The Art of Electronics
+Textbook by Paul Horowitz and Winfield Hill<br>
+     2. Electronic Devices and Circuits
+Book by Franz J. Monssen, Louis Nashelsky, and Robert Boylestad<br>
+3.<b>youtube lecture</b>: <a href="https://youtu.be/BxbXnYFqygU">click here</a> <br> </p>                     
+</section>
+</div>
+
+<script>
+	function myFunction() {
+  
+window.open("https://www.filehorse.com/download-multisim/download/", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=700,left=700,width=600,height=500");
+}
+$(document).ready(function(){
+  $("#area1").click(function(){
+    $("#1").show();
+    $("#2").hide();
+     $("#3").hide();
+      $("#4").hide();
+       $("#5").hide();
+        $("#6").hide();
+         $("#7").hide();
+
+  });
+  $("#area2").click(function(){
+    $("#1").hide();
+    $("#2").show();
+     $("#3").hide();
+      $("#4").hide();
+       $("#5").hide();
+        $("#6").hide();
+         $("#7").hide();
+
+  });
+  $("#area3").click(function(){
+    $("#1").hide();
+    $("#2").hide();
+     $("#3").show();
+      $("#4").hide();
+       $("#5").hide();
+        $("#6").hide();
+         $("#7").hide();
+
+  });
+  $("#area4").click(function(){
+    $("#1").hide();
+    $("#2").hide();
+     $("#3").hide();
+      $("#4").show();
+       $("#5").hide();
+        $("#6").hide();
+         $("#7").hide();
+
+  });
+  $("#area5").click(function(){
+    $("#1").hide();
+    $("#2").hide();
+     $("#3").hide();
+      $("#4").hide();
+       $("#5").show();
+        $("#6").hide();
+         $("#7").hide();
+
+  });
+  $("#area6").click(function(){
+    $("#1").hide();
+    $("#2").hide();
+     $("#3").hide();
+      $("#4").hide();
+       $("#5").hide();
+        $("#6").show();
+         $("#7").hide();
+
+  });
+  $("#area7").click(function(){
+    $("#1").hide();
+    $("#2").hide();
+     $("#3").hide();
+      $("#4").hide();
+       $("#5").hide();
+        $("#6").hide();
+         $("#7").show();
+
+  });
+});
+</script>
+</div>
+</body>
+</html>

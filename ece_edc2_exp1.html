@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	 <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+ 
+  <style>
+    #header{
+    background-color:grey;
+    height: 160px;
+    text-align: center;
+    padding-top: 6px;
+    margin-bottom: -20px;
+  }
+
+  #navigation{
+    line-height: 70px;
+    background-color: grey;
+    width: 280px;
+        float: left;
+      padding: 5px;
+        height: 3000px;
+
+  }
+  #main1{
+    
+    background-color:white;
+    height: 3000px;
+    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: scroll; 
+
+      
+  }
+     video { margin-left: 40vw; transform: translate(-50%); }
+  	#tab {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+}
+
+#tab td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#tab tr:nth-child(even){background-color: #f2f2f2;}
+
+#tab tr:hover {background-color: #ddd;}
+
+#tab th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+  	body {
+  background: #555;
+}
+h1   {
+	background:black;
+	font-size:40px;
+	color: white;
+	text-align:center;
+	padding: 20px;
+}
+.content {
+  max-width: 1300px;
+  margin: auto;
+  background: white;
+  padding: 10px;
+}
+ .button {
+  background-color: grey; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+ z-index:10;
+}
+p{
+  color:white;
+}
+button {
+  background-color: black; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin:3px 3px 3px 3px;
+}
+a{
+  color:black;
+}
+.button button:hover {background-color: grey}
+.button:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.simulator button:hover {background-color: red}
+a:hover {background-color: red}
+img {
+  border-radius: 8px;
+}
+.topleft {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+} 
+     
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+ <div id="header">
+   <div class="topleft">
+        <a href="home1.html"><img src="home.JPG" alt="home" width="50" height="50"></a>
+
+        <p>home</p>
+       </div>
+	<div class="content">
+   
+		 <h1 style="text-align:center;">single stage BJT amplifier</h1>
+    </div>
+    <div id="navigation">
+	<div class="wrapper">
+	 
+      </div>
+<div class="button" >
+  
+ <a href="ece_labs_list.html"> <button >EDC-1</button></a><br>
+<button id="area1">Introduction</button><br>
+<button id="area2">Theory</button><br>
+<button id="area3">objective</button><br>
+<button id="area4">procedure</button><br>
+<button id="area5" onclick="myfunction()">simulator</button><br>
+<button id="area6">quiz</button><br>
+<button id="area7">references</button><br>
+</div>
+</div>
+<div id="main">
+<section id="1">
+	<h2>Introduction</h2>
+      <p style="font-size:20px"><b>About the Experiment</b></p>
+      <p>This experiment enables a student to learn<br><br>
+Students are able to
+To perform DC analysis of a single-stage BJT amplifier.
+· To do small signal analysis and find the basic properties of a BJT amplifier.
+· To simulate the design in PSPICE and verify operation.
+________________________________________
+<br>
+</p>
+
+</section>
+<section id="2" style="display: none;"><H2>THEORY</H2>
+<p>1. In the circuit of Figure 1, assume the transistor has a b = 100 and VBE = 0.7V.<br>
+(a) Do DC analysis for the circuit and find its operating or Q point.<br>
+(b) Record the value of VC, VBE, VE, and IC.<br>
+(c) Calculate the necessary small signal parameters.<br>
+(d) Calculate the total DC power consumed in this circuit.<br>
+2. Replace the transistor by its small signal equivalent model, and find<br>
+(a) Overall Voltage Gain - Av<br>
+(b) Current Gain - Ai<br>
+(c) Input resistance - Ri<br>
+(d) Output Resistance- Ro<br>
+3. What is the maximum value that the signal source vs can take in order to ensure<br>
+ small signal operation and that the transistor is always in active region ?<br>
+4. For a sinusoidal input signal vs of 10mV peak amplitude and 1KHz frequency draw<br>
+the total instantaneous quantities vBE(t), vC(t) and iC(t) for one cycle of the input.<br>
+ Clearly mark all values, graphs and axes.<br>
+
+</p>
+</section>
+
+<section id="3" style="display: none;">
+	
+	<H2>AIM:-</H2><p>To perform DC analysis of a single-stage BJT amplifier. To do small signal analysis and find the basic properties of a BJT amplifier. To simulate the design in PSPICE and verify operation.</p>
+</section>
+<section id="4" style="display: none;"><H2>CIRCUIT</H2>	
+<img src="freq_resp_ce_ckt_diagram.png" alt="circuit" width="350" height="250">
+<h2>components required</h2>
+<table id="tab">
+  <tr>
+    <th>S.no</th>
+    <th>name</th> 
+    <th>quantity</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Transistor BC107</td>
+    <td>ONE </a></td>
+    
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Resistors (120K%u2126, 3.3K%u2126,27K%u2126, 1K%u2126)</td>
+    <td>ONE EACH</td>
+    
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Resistors (2.2 K%u2126)</td>
+    <td>TWO</td>
+
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Capacitors (10µF,47µF,22µF)</td>
+    <td>ONE</td>
+    
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>BREAD BOARD</td>
+    <td>ONE</td>
+    
+  
+  </tr>
+
+</table>
+<H2>PROCEDURE</H2>
+<p>1. Wire up the circuit on the bread board after testing all the components.
+2. Keep the load constant. Note down the output voltage varying input from 8V to 14V in steps
+of 1V. Plot the line regulation graph with  along x-axis and  along y-axis. Calculate
+percentage line regulation using the expression (⁄)x100%.
+3. 3. Keep the input voltage constant (say 10V) and note down the output voltage for various
+values of load current starting from 0 to 5 mA, by varying  using a rheostat. Plot the load
+regulation graph with  along x-axis and  along y-axis.
+4. To calculate percentage load regulation, mark  and  on y-axis on the load regulation
+graph.  is the output voltage in the absence of load resistor and  is the output voltage
+corresponding to rated  ( here, 5 mA). Calculate the percentage load regulation  as per
+the equation,
+Vr=((Vnl-Vfl)/Vnl)*100
+	<br><img src="1.png" alt="circuit" width="350" height="250">
+<b>Calculations from the graph</b><br>
+
+Bandwidth = fH – fL (in Hz)
+
+
+</p>
+<h3>Observation Tables:</h3>
+<p><b>Vs=50 mv</b></p>
+<table id="tab">
+  <tr>
+    <th>Frequency</th>
+    <th>	Vo(Volts)</th>
+    <th>	Gain = Vo/Vs</th>	
+    <th>Gain(dB) = 20 log(Vo/Vs)</th>
+    
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+   <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+
+  </tr>
+  <tr>
+   <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    
+  </tr>
+  <tr>
+   <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+<h2>Results</h2>
+
+
+<table id="tab">
+  <tr>
+    <th>parameter</th>
+    <th>hand analysis</th>
+    <th>pspice</th>	
+    <th>error%</th>
+    
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+   <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+
+  </tr>
+  <tr>
+   <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    
+  </tr>
+  <tr>
+   <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+</section>
+<section id="5" style="display: none;"><h2>simulator</h2>
+	<h2>Tutorial link for experiment:</h2>
+<p>refer this vedio for simulation</p>
+<video width="620" height="640" poster="ece_dept.jpg" controls style="float:right">
+  <source src="diode_Demo.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+  
+  Your browser does not support the video tag.
+</video>
+
+<h2>Simulator </h2>
+<p>name:<b>MULTISIM</b></p>
+<div class="simulator">
+<button onclick="myFunction()">Multisim Download</button>
+</div>
+<p><b> installation details</b><a href=" https://knowledge.ni.com/KnowledgeArticleDetails?id=kA03q000000YH77CAG&l=en-US">click here</a></p>
+</section>
+<section id="6" style="display: none;"><h2> take quiz</h2>
+<a href="qd.html" style="color:black">attempt quiz</a>
+</section>
+<section id="7" style="display: none;">
+	<h2>references</h2><p>
+	1.The Art of Electronics
+Textbook by Paul Horowitz and Winfield Hill<br>
+     2. Electronic Devices and Circuits
+Book by Franz J. Monssen, Louis Nashelsky, and Robert Boylestad<br>
+3.<b>youtube lecture</b>: <a href="https://youtu.be/Mmm_eQv-4mo">click here</a> <br> </p>                     
+</section>
+</div>
+
+<script>
+	function myFunction() {
+  
+window.open("https://www.filehorse.com/download-multisim/download/", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=700,left=700,width=600,height=500");
+}
+$(document).ready(function(){
+  $("#area1").click(function(){
+    $("#1").show();
+    $("#2").hide();
+     $("#3").hide();
+      $("#4").hide();
+       $("#5").hide();
+        $("#6").hide();
+         $("#7").hide();
+
+  });
+  $("#area2").click(function(){
+    $("#1").hide();
+    $("#2").show();
+     $("#3").hide();
+      $("#4").hide();
+       $("#5").hide();
+        $("#6").hide();
+         $("#7").hide();
+
+  });
+  $("#area3").click(function(){
+    $("#1").hide();
+    $("#2").hide();
+     $("#3").show();
+      $("#4").hide();
+       $("#5").hide();
+        $("#6").hide();
+         $("#7").hide();
+
+  });
+  $("#area4").click(function(){
+    $("#1").hide();
+    $("#2").hide();
+     $("#3").hide();
+      $("#4").show();
+       $("#5").hide();
+        $("#6").hide();
+         $("#7").hide();
+
+  });
+  $("#area5").click(function(){
+    $("#1").hide();
+    $("#2").hide();
+     $("#3").hide();
+      $("#4").hide();
+       $("#5").show();
+        $("#6").hide();
+         $("#7").hide();
+
+  });
+  $("#area6").click(function(){
+    $("#1").hide();
+    $("#2").hide();
+     $("#3").hide();
+      $("#4").hide();
+       $("#5").hide();
+        $("#6").show();
+         $("#7").hide();
+
+  });
+  $("#area7").click(function(){
+    $("#1").hide();
+    $("#2").hide();
+     $("#3").hide();
+      $("#4").hide();
+       $("#5").hide();
+        $("#6").hide();
+         $("#7").show();
+
+  });
+});
+</script>
+</div>
+</body>
+</html>
